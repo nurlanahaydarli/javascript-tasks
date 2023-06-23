@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Task 2</title>
+</head>
+<body>
+<h1 style="text-align: center;margin: 20px auto">Hello world</h1>
+
+
+<script>
+
+    // 1.
+    // Klaviaturadan daxil edilən 3 ədədin ortalamasını tapan
+    // proqram kodu yazın.
+
+    let a, b, c, average_sum;
+    a = parseInt(prompt('Enter first number'));
+    b = parseInt(prompt('Enter second number'));
+    c = parseInt(prompt('Enter third number'));
+    average_sum = Math.round(((a + b + c) / 3),2);
+    console.log(`Average sum is ${average_sum}`);
+
+
+    // 2.
+    // Klaviaturadan daxil edilən Semestr nəticəsində yığılan bal və
+    // imtahandan əldə olunan bala əsasən, tələbənin növbəti semestrə
+    // buraxılmasını təyin edən proqram kodu yazın.
+
+    let isPassed;
+
+    function studentIsPassed(final_exam, semester_result) {
+        semester_result = semester_result * 40 / 100;
+        final_exam = final_exam * 60 / 100;
+        isPassed = semester_result + final_exam;
+        return isPassed;
+    }
+
+    studentIsPassed(70, 90);
+    if (isPassed > 50) {
+        console.log("The student is passed exam");
+    } else {
+        console.log("The student is not passed exam");
+    }
+    // 3.
+    // Hər bir dövr operatorundan istifadə edərək (for, while, do while) ekrana “MƏN JAVASCRIPTDƏ MASTER OLACAM yazısını yazdıran proqram yazın.
+    let i = 0;
+    while (i < 10) {
+        console.log("MƏN JAVASCRIPTDƏ MASTER OLACAM");
+        i++;
+    }
+
+    // 4.
+    // 1-dən 100-ə qədər olan ədədlərin cəmini tapan proqram yazın.
+    let sum = 0;
+    for (let i = 1; i <= 100; i++) {
+        sum = sum + i;
+    }
+    console.log('the sum is', sum);
+
+    // 5.
+    // 1-dən 10-a qədər ədədləri yan-yana yazdıran və aralarında , olan (sonuncu ədəd xaric) proqram kodu yazın.
+    let result_num = 1;
+    let arr = [];
+    for (let i = 2; i < 10; i++) {
+        result_num = result_num + ',' + i;
+    }
+    for (let i = 1; i < 10; i++) {
+        arr.push(i);
+    }
+    console.log(result_num, 'result_num')
+    console.log(arr, 'arr')
+
+    // 6.
+    // Klaviaturadan daxil edilən bir ədədin faktorialını hesablayan proqram tərtib edin.
+    let num = parseInt(prompt("Your number"));
+    let factorial = 1;
+
+    function result_factorial(num) {
+        for (let i = 1; i <= num; i++) {
+            factorial = factorial * i;
+        }
+        return factorial;
+    }
+
+    console.log('the factorial is', result_factorial(num));
+
+    // 7.
+    // Aşağıda təyin edilən f(x,y) funksiyasınn klaviaturadan daxil
+    // edilən x və y dəyərləri üçün proqram kodunu tərtib edin.
+    //     x>0, y<0 isə f(x,y) = 4x+2y+4
+    // x>0, y=0 isə f(x,y) = 2x-y+3
+    // x<0, y>0 isə f(x,y) = 3x+4y+3
+
+    let x, y, equation_result;
+    x = parseInt(prompt('enter x'))
+    y = parseInt(prompt('enter y'))
+
+    function x_y_equation(x, y) {
+        if (x > 0 && y < 0) {
+            equation_result = 4 * x + 2 * y + 4;
+        } else if (x > 0 && y === 0) {
+            equation_result = 2 * x - y + 3;
+        } else if (x < 0 && y > 0) {
+            equation_result = 3 * x + 4 * y + 3;
+        } else {
+            equation_result = x + y;
+        }
+        return equation_result;
+    }
+
+    console.log(x_y_equation(x, y), 'f(x,y)');
+
+
+    // 8.
+    // Vurma cədvəlini yaradan proqram kodunu yazın. Nümunə üçün,hər bir sətr bir tab qədər boşluq yaratmalıdır və bu kod “\t” kodudur.
+
+    let multiplication_table;
+
+    for (let i = 1; i <= 10; i++) {
+        for (let j = 1; j <= 10; j++) {
+            multiplication_table = i * j;
+            console.log(`${i}*${j} = ${multiplication_table}\n `);
+        }
+    }
+
+    // 9.
+    //     Boloniya sisteminə əsasən, tələbələrin akkreditasiyası üçün tələb olunan qiymətləndirmə sistemini hərflərlə yazan proqramtərtib edin.
+    //     Məsələn, Tələbə 91-100 alıbsa, “A”, 51-60 alıbsa E yazdırsın. 51-dən aşağı halda “F”.
+    let grade= parseInt(prompt("Enter your grade"))
+    let bologna_grade;
+    if(grade >90 && grade<=100){
+        bologna_grade = 'A'
+    }else if(grade>80 && grade<=90){
+        bologna_grade = 'B'
+    }else if(grade> 70 && grade<=80){
+        bologna_grade = 'C'
+    }else if(grade>60 && grade<=70){
+        bologna_grade = 'D'
+    }else if(grade>50 && grade<=60){
+        bologna_grade = 'E'
+    }else if(grade>= 100){
+        alert("You entered wrong format");
+    }else{
+        bologna_grade = 'F'
+    }
+    console.log(bologna_grade,'bologna_grade')
+
+
+    // 10.
+    // Tam ədədlərin çeşidlənmiş massivini və hədəf tam ədədini qəbul edən funksiyanı yazın. Funksiya, hədəf tam ədədin massivdə olub-olmadığını müəyyən etmək üçün Binar Axtarı
+    // alqoritmindən istifadə etməli və əgər varsa, indeksini qaytarmalıdır, əks halda -1.
+    let arr_binary = [0, 1, 21, 33, 45, 45, 61, 71, 72, 73]
+    let target_num = 33;
+
+    let result_number = arr_binary.includes(target_num);
+    if(result_number){
+        console.log(arr_binary.indexOf(target_num),'yes');
+    }else{
+        console.log("-1",'no');
+    }
+
+</script>
+</body>
+</html>
