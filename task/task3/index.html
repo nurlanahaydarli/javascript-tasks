@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TAsk 3 </title>
+</head>
+<body>
+<h1 class="">Hello world</h1>
+
+
+<script>
+    // verilen moterizelerden ibaret array  simmertikdir yoxsa yox
+
+    let arr= [')','(',"(",')'];
+    let n = arr.length;
+    let isSymetric;
+
+    for(let i=0;i<n/2;i++){
+        if(arr[i]===arr[n-1-i]){
+            isSymetric =true
+        }else{
+            isSymetric= false
+        }
+    }
+    console.log(isSymetric);
+
+    // verilen indekse qeder fibonacci reqemlerini arrraya topla
+
+    let a=0, b=1;
+    let fibonacci_arr=[0,1]
+
+    let enteredIndex = prompt('Enter a index for fibonacci array');
+
+    for(let i =2;i<enteredIndex;i++){
+            fibonacci_arr[i] = fibonacci_arr[i-2]+fibonacci_arr[i-1]
+    }
+    console.log(fibonacci_arr);
+    
+</script>
+</body>
+</html>
