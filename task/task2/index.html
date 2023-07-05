@@ -153,9 +153,10 @@
     // 10.
     // Tam ədədlərin çeşidlənmiş massivini və hədəf tam ədədini qəbul edən funksiyanı yazın. Funksiya, hədəf tam ədədin massivdə olub-olmadığını müəyyən etmək üçün Binar Axtarı
     // alqoritmindən istifadə etməli və əgər varsa, indeksini qaytarmalıdır, əks halda -1.
-    let arr_binary = [0, 1, 21, 33, 45, 45, 61, 71, 72, 73]
+    let arr_binary = [0, 1, 21, 333, 45, 45, 61, 71,33, 72, 73]
     let target_num = 33;
-
+    let hasNumber;
+    let n;
     let result_number = arr_binary.includes(target_num);
     if(result_number){
         console.log(arr_binary.indexOf(target_num),'yes');
@@ -163,6 +164,17 @@
         console.log("-1",'no');
     }
 
+    for(let i =0;i<arr_binary.length;i++){
+        if(arr_binary[i]===target_num){
+            n = i;
+            hasNumber= true;
+        }
+    }
+    if(hasNumber){
+        console.log(n)
+    }else{
+        console.log('-1')
+    }
 </script>
 </body>
 </html>
