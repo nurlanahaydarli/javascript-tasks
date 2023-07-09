@@ -118,13 +118,14 @@
     // 8.
     // Vurma cədvəlini yaradan proqram kodunu yazın. Nümunə üçün,hər bir sətr bir tab qədər boşluq yaratmalıdır və bu kod “\t” kodudur.
 
-    let multiplication_table;
+    let multiplication_table=0;
 
     for (let i = 1; i <= 10; i++) {
         for (let j = 1; j <= 10; j++) {
             multiplication_table = i * j;
             console.log(`${i}*${j} = ${multiplication_table}\t `);
         }
+        multiplication_table = multiplication_table + '\n'
     }
 
     // 9.

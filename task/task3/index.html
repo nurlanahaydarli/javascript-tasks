@@ -16,16 +16,20 @@
 
     let arr= [')','(',"(",')'];
     let n = arr.length;
-    let isSymetric;
-
-    for(let i=0;i<n/2;i++){
-        if(arr[i]===arr[n-1-i]){
-            isSymetric =true
-        }else{
-            isSymetric= false
+    let isSymmetric;
+    function  isSymmetricFunc(arr){
+        for(let i=0;i<n/2;i++){
+            if(arr[i]===arr[n-1-i]){
+                isSymmetric =true
+                return isSymmetric
+            }else{
+                isSymmetric= false
+                return "is not symmetric"
+            }
         }
     }
-    console.log(isSymetric);
+    let result =isSymmetricFunc(arr)
+    console.log(result);
 
     // verilen indekse qeder fibonacci reqemlerini arrraya topla
 
