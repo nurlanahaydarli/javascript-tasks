@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TASK 4</title>
+</head>
+<body>
+
+
+<h1>Hello world</h1>
+
+<script>
+    let new_arr = []
+    function sorting_array(arr, movingElement){
+        for(let i = 0;i<arr.length;i++){
+            if(arr[i] ===movingElement){
+                new_arr.push(arr[i])
+            }else{
+                new_arr.unshift(arr[i])
+            }
+        }
+        return new_arr
+    }
+
+    sorting_array([2, 1, 2, 2, 2, 3, 4, 2],2)
+
+
+    console.log(new_arr)
+
+</script>
+</body>
+</html>
