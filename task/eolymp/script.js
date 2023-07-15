@@ -34,14 +34,13 @@ function findeMirrorNumbers(a, b) {
                     x = Math.floor(x % 10)
                     z = m * 10 + x
                     y = x * 10 + m
-                    break
+                    if (y < b && y===z) {
+                        count = count + 1
+                        num_arr.push(z,y)
+                    }
                 }
             }
-            if (y < b) {
-                count = count + 1
-                num_arr.push(z,y)
-                // console.log(z, y)
-            }
+
         }
     }
     console.log(count, num_arr)
